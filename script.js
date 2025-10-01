@@ -114,26 +114,27 @@ class LiveUpdateManager {
 // Enhanced countdown timer
 class CountdownManager {
     static start() {
-        const eventDate = new Date('2025-10-17T09:00:00+07:00'); // 17 Oktober 2025
+        const eventDate = new Date('2025-10-17T10:00:00+07:00'); // 17 Oktober 2025, 10:00 WIB
         
         const updateCountdown = () => {
             const now = new Date();
             const timeDiff = eventDate - now;
             
-            // Debug logging
-            console.log('Current time:', now);
-            console.log('Event date:', eventDate);
-            console.log('Time difference (ms):', timeDiff);
-            
             if (timeDiff <= 0) {
                 // Cek jika masih dalam periode event (17-18 Oktober)
                 const eventEndDate = new Date('2025-10-18T18:00:00+07:00');
                 if (now <= eventEndDate) {
-                    document.getElementById('countdown').innerHTML = 
-                        '<div class="text-center text-2xl text-cyan-400">🎉 EVENT SEDANG BERLANGSUNG! 🎉</div>';
+                    const countdownEl = document.getElementById('countdown');
+                    if (countdownEl) {
+                        countdownEl.innerHTML = 
+                            '<div class="text-center text-2xl text-cyan-400">🎉 EVENT SEDANG BERLANGSUNG! 🎉</div>';
+                    }
                 } else {
-                    document.getElementById('countdown').innerHTML = 
-                        '<div class="text-center text-2xl text-gray-400">📅 EVENT TELAH SELESAI</div>';
+                    const countdownEl = document.getElementById('countdown');
+                    if (countdownEl) {
+                        countdownEl.innerHTML = 
+                            '<div class="text-center text-2xl text-gray-400">📅 EVENT TELAH SELESAI</div>';
+                    }
                 }
                 return;
             }
@@ -153,12 +154,14 @@ class CountdownManager {
             if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
             if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
             if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
-            
-            console.log(`Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`);
         };
         
+        // Jalankan countdown segera dan setiap detik
         updateCountdown();
-        setInterval(updateCountdown, 1000);
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Simpan interval ID untuk debugging
+        this.intervalId = countdownInterval;
     }
 }
 

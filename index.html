@@ -93,7 +93,7 @@
     </style>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'id', includedLanguages: 'en,id,ja,ar', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'id', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript"
@@ -615,31 +615,6 @@
                     hideModal();
                 }
             });
-
-            // Countdown Timer
-            function updateCountdown() {
-                const eventDate = new Date('2025-10-17T00:00:00').getTime();
-                const now = new Date().getTime();
-                const distance = eventDate - now;
-
-                if (distance > 0) {
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    $('#days').text(days.toString().padStart(2, '0'));
-                    $('#hours').text(hours.toString().padStart(2, '0'));
-                    $('#minutes').text(minutes.toString().padStart(2, '0'));
-                    $('#seconds').text(seconds.toString().padStart(2, '0'));
-                } else {
-                    $('#countdown').html('<p class="text-2xl font-bold text-cyan-400">🎉 Acara Dimulai! 🎉</p>');
-                }
-            }
-
-            // Update countdown setiap detik
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
 
             // Registration Progress Simulation
             function updateRegistrationProgress() {
