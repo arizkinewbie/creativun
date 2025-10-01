@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATIVUN 2025 - More Creative and So Much Fun | Phiraka Sinergi Indonesia</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="CREATIVUN 2025 - More Creative and So Much Fun. Bergabunglah dalam acara penuh kreativitas dan keseruan!">
+    <meta name="keywords"
+        content="creativun, phiraka, team building, company event, Sentul, 2025, kostum, cosplay, kartun, acara perusahaan">
+    <meta name="author" content="Phiraka Sinergi Indonesia">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="CREATIVUN 2025 - More Creative and So Much Fun">
+    <meta property="og:description" content="Bergabunglah dalam acara penuh kreativitas dan keseruan!">
+    <meta property="og:image" content="./banner.png">
+    <meta property="og:url" content="https://creativun2025.phiraka.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CREATIVUN 2025">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CREATIVUN 2025 - More Creative and So Much Fun">
+    <meta name="twitter:description" content="Bergabunglah dalam acara penuh kreativitas dan keseruan!">
+    <meta name="twitter:image" content="./banner.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#d946ef">
+
+    <!-- Memuat Tailwind CSS dari CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Memuat Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Memuat jQuery dari CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style></style>
+    <!-- Google Translate Widget -->
+    <style>
+        /* Hide the floating Google Translate banner */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        /* Hide the small Google logo/link and credit text, but keep the select visible */
+        .goog-logo-link,
+        .goog-te-gadget .goog-te-simple,
+        .goog-te-gadget .goog-te-spinner {
+            display: none !important;
+        }
+
+        /* Ensure the native select (.goog-te-combo) is visible and styled for footer dark background */
+        #google_translate_element .goog-te-combo,
+        #google_translate_element select {
+            display: inline-block !important;
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.06) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            padding: 6px 10px !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+        }
+
+        /* change background select on hover */
+        #google_translate_element select:hover {
+            color: #fff !important;
+            background: rgb(80, 80, 80) !important;
+        }
+
+        /* hide img elements added by Google Translate */
+        #google_translate_element img {
+            display: none !important;
+        }
+
+        /* Avoid hiding other elements globally to prevent breaking layout */
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'id', includedLanguages: 'en,id,ja,ar', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="text-white">
+    <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
+
+    <!-- ===== BAGIAN UTAMA (HERO) ===== -->
+    <header
+        class="min-h-screen bg-gray-900 bg-cover bg-center flex flex-col justify-center items-center text-center p-8"
+        style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.95)), url('banner.png');">
+        <h1 class="text-5xl md:text-7xl font-bold text-fuchsia-400 text-glow-fuchsia uppercase tracking-widest mt-7">
+            CREATIVUN 2025</h1>
+        <p class="mt-4 text-xl md:text-2xl text-cyan-300 text-glow-cyan">"More Creative and So Much Fun"</p>
+        <div class="mt-8 text-lg text-gray-300 space-y-2">
+            <p>🗓️ <span class="font-semibold">17-18 Oktober 2025</span></p>
+            <p>📍 <span class="font-semibold">Sentul</span></p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="mt-8 bg-gray-800/50 p-6 rounded-lg border border-cyan-500/50">
+            <p class="text-cyan-300 text-sm mb-2">⏰ Waktu tersisa menuju acara:</p>
+            <div id="countdown" class="grid grid-cols-4 gap-4 text-center">
+                <div class="bg-fuchsia-600 p-3 rounded">
+                    <div id="days" class="text-2xl font-bold">00</div>
+                    <div class="text-xs">HARI</div>
+                </div>
+                <div class="bg-cyan-600 p-3 rounded">
+                    <div id="hours" class="text-2xl font-bold">00</div>
+                    <div class="text-xs">JAM</div>
+                </div>
+                <div class="bg-fuchsia-600 p-3 rounded">
+                    <div id="minutes" class="text-2xl font-bold">00</div>
+                    <div class="text-xs">MENIT</div>
+                </div>
+                <div class="bg-cyan-600 p-3 rounded">
+                    <div id="seconds" class="text-2xl font-bold">00</div>
+                    <div class="text-xs">DETIK</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Progress Bar -->
+        <div class="mt-8 bg-gray-800/50 p-6 rounded-lg border border-fuchsia-500/50 max-w-md">
+            <h3 class="text-lg font-semibold mb-4 text-fuchsia-400">📊 Status Pendaftaran</h3>
+            <div class="w-full bg-gray-700 rounded-full h-4 mb-2">
+                <div id="progress-bar"
+                    class="bg-gradient-to-r from-fuchsia-600 to-cyan-500 h-4 rounded-full progress-bar"
+                    style="width: 67%"></div>
+            </div>
+            <p id="progress-text" class="text-sm text-gray-300">67% dari target peserta (134/200 orang)</p>
+            <p class="text-xs text-cyan-300 mt-1">✨ Buruan daftar, slot terbatas!</p>
+        </div>
+
+        <button id="register-btn"
+            class="mt-10 px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white font-bold text-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse button-glow">
+            DAFTAR SEKARANG
+        </button>
+    </header>
+
+    <main class="bg-gray-900">
+        <!-- ===== BAGIAN POSTER ACARA ===== -->
+        <section class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6 text-center flex flex-col items-center">
+                <h2 class="text-4xl font-bold mb-10 text-glow-fuchsia">Rangkaian Acara</h2>
+                <div
+                    class="max-w-3xl w-full bg-gray-900 p-2 md:p-4 rounded-lg border-2 border-cyan-500/50 shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                    <img src="poster.png" alt="Poster CREATIVUN 2025" class="rounded-lg w-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x800/111827/FFFFFF?text=Gagal+Memuat+Poster';">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TIMELINE DETAIL ACARA ===== -->
+        <section class="bg-gray-900 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-10 text-center text-glow-fuchsia">Timeline Acara</h2>
+                <div class="max-w-6xl mx-auto">
+                    <!-- Hari 1 -->
+                    <div class="mb-12">
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-8 text-center">🌅 Hari 1 - 17 Oktober 2025</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">08:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Registration & Welcome</h4>
+                                        <p class="text-gray-300">Check-in peserta & welcome breakfast</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">09:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Opening Ceremony</h4>
+                                        <p class="text-gray-300">Pembukaan & ice breaking games</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">10:30</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Team Building Games</h4>
+                                        <p class="text-gray-300">Aktivitas kelompok & kompetisi seru</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">12:30</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Lunch Break</h4>
+                                        <p class="text-gray-300">Istirahat & makan siang bersama</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">14:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Creative Workshop</h4>
+                                        <p class="text-gray-300">Workshop kreativitas & skill building</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">17:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Free Time</h4>
+                                        <p class="text-gray-300">Istirahat & persiapan acara malam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hari 2 -->
+                    <div>
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-8 text-center">🌟 Hari 2 - 18 Oktober 2025</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">08:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Morning Exercise</h4>
+                                        <p class="text-gray-300">Senam pagi & energizer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">09:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Costume Competition</h4>
+                                        <p class="text-gray-300">Kompetisi kostum & fashion show</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">11:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Final Games</h4>
+                                        <p class="text-gray-300">Kompetisi final & grand challenge</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">13:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Award Ceremony</h4>
+                                        <p class="text-gray-300">Pengumuman pemenang & pembagian hadiah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-fuchsia-500/30">
+                                <div class="timeline-line"></div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-fuchsia-600 text-white px-4 py-2 rounded-lg font-bold">14:30</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-fuchsia-400">Closing Ceremony</h4>
+                                        <p class="text-gray-300">Penutupan & group photo session</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold">16:00</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-cyan-400">Departure</h4>
+                                        <p class="text-gray-300">Persiapan kepulangan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LIVE UPDATES ===== -->
+        <section class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-10 text-center text-glow-cyan">📢 Live Updates</h2>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="bg-gray-900 border-l-4 border-cyan-500 p-6 rounded-r-lg slide-in">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full pulse-animation"></span>
+                                    <h3 class="text-lg font-semibold text-cyan-400">🎉 BREAKING NEWS!</h3>
+                                </div>
+                                <p class="text-gray-300">Pendaftaran mencapai 67%! Hanya tersisa 66 slot lagi. Buruan
+                                    daftar sebelum kehabisan!</p>
+                            </div>
+                            <span class="text-sm text-gray-500">Baru saja</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border-l-4 border-fuchsia-500 p-6 rounded-r-lg">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-semibold text-fuchsia-400">📅 Pengingat Penting</h3>
+                                <p class="text-gray-300 mt-2">Deadline pendaftaran: <strong>10 Oktober 2025</strong>.
+                                    Jangan sampai terlewat!</p>
+                            </div>
+                            <span class="text-sm text-gray-500">1 Oct 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border-l-4 border-cyan-500 p-6 rounded-r-lg">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-semibold text-cyan-400">👗 Tips Kostum</h3>
+                                <p class="text-gray-300 mt-2">Siapkan kostum kartun atau cosplay favoritmu! Kategori
+                                    lomba: Most Creative, Best Execution, dan People's Choice.</p>
+                            </div>
+                            <span class="text-sm text-gray-500">30 Sep 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border-l-4 border-fuchsia-500 p-6 rounded-r-lg">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-semibold text-fuchsia-400">🚌 Transportasi</h3>
+                                <p class="text-gray-300 mt-2">Bus akan berangkat dari kantor pusat Jakarta pada pukul
+                                    06:00. Titik kumpul di lobby gedung utama.</p>
+                            </div>
+                            <span class="text-sm text-gray-500">29 Sep 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN TUJUAN ACARA ===== -->
+        <section class="container mx-auto px-6 py-20 text-center">
+            <h2 class="text-4xl font-bold mb-10 text-glow-cyan">Tujuan Acara</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kartu 1 -->
+                <div
+                    class="bg-gray-800 p-6 rounded-lg border border-fuchsia-500/50 transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-fuchsia-400">Kebersamaan & Solidaritas</h3>
+                    <p class="mt-2 text-gray-400">Mempererat ikatan sosial dan menumbuhkan rasa kebersamaan antar
+                        karyawan.</p>
+                </div>
+                <!-- Kartu 2 -->
+                <div
+                    class="bg-gray-800 p-6 rounded-lg border border-cyan-500/50 transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400">Mengasah Kreativitas</h3>
+                    <p class="mt-2 text-gray-400">Memberi keleluasaan kepada karyawan untuk bebas berkreativitas.</p>
+                </div>
+                <!-- Kartu 3 -->
+                <div
+                    class="bg-gray-800 p-6 rounded-lg border border-fuchsia-500/50 transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-fuchsia-400">Komunikasi & Kolaborasi</h3>
+                    <p class="mt-2 text-gray-400">Mendorong kolaborasi dan hubungan emosional yang lebih efektif.</p>
+                </div>
+                <!-- Kartu 4 -->
+                <div
+                    class="bg-gray-800 p-6 rounded-lg border border-cyan-500/50 transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400">Refreshment</h3>
+                    <p class="mt-2 text-gray-400">Melepas stres agar dapat kembali bekerja dengan pikiran yang lebih
+                        segar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN FAQ ===== -->
+        <section class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-10 text-center text-glow-cyan">Frequently Asked Questions</h2>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="bg-gray-900 border border-fuchsia-500/30 rounded-lg">
+                        <button
+                            class="faq-question w-full text-left p-6 font-semibold text-fuchsia-400 hover:bg-gray-800/50 transition-colors"
+                            onclick="toggleFAQ(this)">
+                            🎯 Siapa saja yang bisa ikut CREATIVUN 2025?
+                            <span class="float-right">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                            Semua karyawan Phiraka Sinergi Indonesia dapat mengikuti acara ini. Kegiatan ini dirancang
+                            untuk mempererat hubungan antar tim dan departemen.
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-cyan-500/30 rounded-lg">
+                        <button
+                            class="faq-question w-full text-left p-6 font-semibold text-cyan-400 hover:bg-gray-800/50 transition-colors"
+                            onclick="toggleFAQ(this)">
+                            🎪 Apa saja kegiatan yang akan ada?
+                            <span class="float-right">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                            Kegiatan meliputi team building games, kompetisi kreativitas, fashion show kostum, workshop,
+                            dan malam hiburan dengan berbagai penampilan menarik.
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-fuchsia-500/30 rounded-lg">
+                        <button
+                            class="faq-question w-full text-left p-6 font-semibold text-fuchsia-400 hover:bg-gray-800/50 transition-colors"
+                            onclick="toggleFAQ(this)">
+                            👗 Apakah kostum wajib?
+                            <span class="float-right">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                            Kostum dengan tema KARTUN atau COSPLAY sangat direkomendasikan terutama untuk Creativun
+                            Night. Ada kompetisi "Best Gimmick Award" untuk kostum terbaik!
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-cyan-500/30 rounded-lg">
+                        <button
+                            class="faq-question w-full text-left p-6 font-semibold text-cyan-400 hover:bg-gray-800/50 transition-colors"
+                            onclick="toggleFAQ(this)">
+                            🏆 Apa hadiah untuk pemenang kompetisi?
+                            <span class="float-right">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                            Detail hadiah akan diumumkan lebih lanjut. Yang pasti ada apresiasi menarik untuk para
+                            pemenang di setiap kategori kompetisi!
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-fuchsia-500/30 rounded-lg">
+                        <button
+                            class="faq-question w-full text-left p-6 font-semibold text-fuchsia-400 hover:bg-gray-800/50 transition-colors"
+                            onclick="toggleFAQ(this)">
+                            🚗 Bagaimana dengan transportasi dan akomodasi?
+                            <span class="float-right">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                            Informasi detail mengenai transportasi dan akomodasi akan diberikan setelah pendaftaran.
+                            Lokasi di Sentul mudah diakses.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT INFORMATION ===== -->
+        <section class="bg-gray-900 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-10 text-center text-glow-cyan">📞 Contact Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div
+                        class="bg-gray-800 p-8 rounded-lg border border-fuchsia-500/50 text-center hover:bg-gray-700/50 transition-colors">
+                        <div
+                            class="w-16 h-16 bg-fuchsia-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-fuchsia-400 mb-4">Panitia Acara</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567890"
+                                    class="text-cyan-400 hover:text-cyan-300">+62 812-3456-7890</a></p>
+                            <p>✉️ Email: <a href="mailto:creativun2025@phiraka.com"
+                                    class="text-cyan-400 hover:text-cyan-300">creativun2025@phiraka.com</a></p>
+                            <p class="text-sm text-gray-400 mt-3">Pertanyaan umum & informasi acara</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800 p-8 rounded-lg border border-cyan-500/50 text-center hover:bg-gray-700/50 transition-colors">
+                        <div class="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📝</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-cyan-400 mb-4">Tim Registrasi</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567891"
+                                    class="text-fuchsia-400 hover:text-fuchsia-300">+62 812-3456-7891</a></p>
+                            <p>✉️ Email: <a href="mailto:registration@phiraka.com"
+                                    class="text-fuchsia-400 hover:text-fuchsia-300">registration@phiraka.com</a></p>
+                            <p class="text-sm text-gray-400 mt-3">Bantuan pendaftaran & technical support</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800 p-8 rounded-lg border border-fuchsia-500/50 text-center hover:bg-gray-700/50 transition-colors">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-fuchsia-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🚨</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-fuchsia-400 mb-4">Emergency Contact</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567892"
+                                    class="text-cyan-400 hover:text-cyan-300">+62 812-3456-7892</a></p>
+                            <p>🚨 <span class="text-red-400 font-semibold">Available 24/7</span></p>
+                            <p class="text-sm text-gray-400 mt-3">Kontak darurat selama acara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-glow-fuchsia">Follow Our Social Media</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#"
+                            class="bg-gray-800 p-4 rounded-full border border-fuchsia-500/50 hover:bg-fuchsia-600 transition-colors">
+                            <span class="text-2xl">📸</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 p-4 rounded-full border border-cyan-500/50 hover:bg-cyan-600 transition-colors">
+                            <span class="text-2xl">👥</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 p-4 rounded-full border border-fuchsia-500/50 hover:bg-fuchsia-600 transition-colors">
+                            <span class="text-2xl">🐦</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 p-4 rounded-full border border-cyan-500/50 hover:bg-cyan-600 transition-colors">
+                            <span class="text-2xl">💼</span>
+                        </a>
+                    </div>
+                    <p class="text-gray-500 mt-4">Diselenggarakan oleh Tim People & Culture dan Tim Development &
+                        Services.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== BAGIAN FOOTER ===== -->
+    <footer class="text-center py-8 bg-gray-900 border-t border-gray-700">
+        <p class="text-gray-400 font-bold">&copy; 2025 Phiraka Sinergi Indonesia. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ===== MODAL REGISTRASI (IFRAME) ===== -->
+    <div id="registration-modal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4 z-50 hidden">
+        <div
+            class="bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl h-[90vh] flex flex-col relative border-2 border-fuchsia-500 shadow-[0_0_20px_rgba(217,70,239,0.5)]">
+            <!-- Tombol Tutup Modal -->
+            <button id="close-modal-btn"
+                class="absolute -top-4 -right-4 bg-white text-gray-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl hover:bg-fuchsia-400 transition-colors z-10">&times;</button>
+
+            <h3 class="text-2xl font-bold text-center py-4 text-glow-cyan border-b border-gray-700">Formulir Pendaftaran
+            </h3>
+
+            <!-- Kontainer Iframe Google Form -->
+            <div class="flex-grow p-2">
+                <iframe src="https://forms.gle/MXxa1vma8CbFQ6449" width="100%" height="100%" frameborder="0"
+                    marginheight="0" marginwidth="0" class="rounded-b-lg">Memuat…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script jQuery untuk Modal -->
+    <script>
+        $(document).ready(function () {
+            // Fungsi untuk menampilkan modal
+            function showModal() {
+                $('#registration-modal').removeClass('hidden').fadeIn(300);
+            }
+
+            // Fungsi untuk menyembunyikan modal
+            function hideModal() {
+                $('#registration-modal').fadeOut(300, function () {
+                    $(this).addClass('hidden');
+                });
+            }
+
+            // Tampilkan modal saat tombol register diklik
+            $('#register-btn').on('click', function () {
+                showModal();
+            });
+
+            // Sembunyikan modal saat tombol close diklik
+            $('#close-modal-btn').on('click', function () {
+                hideModal();
+            });
+
+            // Sembunyikan modal saat area luar modal (latar belakang gelap) diklik
+            $('#registration-modal').on('click', function (e) {
+                if ($(e.target).is('#registration-modal')) {
+                    hideModal();
+                }
+            });
+
+            // Sembunyikan modal saat tombol 'Escape' ditekan
+            $(document).on('keydown', function (e) {
+                if (e.key === "Escape") {
+                    hideModal();
+                }
+            });
+
+            // Countdown Timer
+            function updateCountdown() {
+                const eventDate = new Date('2025-10-17T00:00:00').getTime();
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    $('#days').text(days.toString().padStart(2, '0'));
+                    $('#hours').text(hours.toString().padStart(2, '0'));
+                    $('#minutes').text(minutes.toString().padStart(2, '0'));
+                    $('#seconds').text(seconds.toString().padStart(2, '0'));
+                } else {
+                    $('#countdown').html('<p class="text-2xl font-bold text-cyan-400">🎉 Acara Dimulai! 🎉</p>');
+                }
+            }
+
+            // Update countdown setiap detik
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Registration Progress Simulation
+            function updateRegistrationProgress() {
+                // Simulasi data real-time (in production, this would fetch from API)
+                const baseProgress = 67;
+                const randomFluctuation = Math.floor(Math.random() * 3); // 0-2% random change
+                const currentProgress = Math.min(baseProgress + randomFluctuation, 100);
+                const currentCount = Math.floor((currentProgress / 100) * 200);
+
+                $('#progress-bar').css('width', currentProgress + '%');
+                $('#progress-text').text(`${currentProgress}% dari target peserta (${currentCount}/200 orang)`);
+            }
+
+            // Update progress setiap 30 detik untuk simulasi real-time
+            updateRegistrationProgress();
+            setInterval(updateRegistrationProgress, 30000);
+
+            // Smooth scrolling untuk navigation
+            $('a[href^="#"]').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 100
+                    }, 1000);
+                }
+            });
+
+            // Lazy loading simulation untuk gambar
+            function lazyLoadImages() {
+                $('img[data-src]').each(function () {
+                    var $img = $(this);
+                    var src = $img.attr('data-src');
+
+                    $img.attr('src', src).removeAttr('data-src');
+                    $img.on('load', function () {
+                        $img.addClass('fade-in');
+                    });
+                });
+            }
+
+            // Auto-refresh live updates (simulasi)
+            function refreshLiveUpdates() {
+                // Simulasi update baru
+                const updateTime = new Date().toLocaleTimeString('id-ID', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+                // Update timestamp pada live updates
+                $('.pulse-animation').parent().parent().find('span:last').text('Baru saja (' + updateTime + ')');
+            }
+
+            // Refresh live updates setiap 5 menit
+            setInterval(refreshLiveUpdates, 300000);
+
+            // Intersection Observer untuk animasi saat scroll
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('slide-in');
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+
+                // Observe elemen yang perlu animasi
+                document.querySelectorAll('.timeline-item, .bg-gray-900').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // WhatsApp quick contact
+            window.contactWhatsApp = function (number, message) {
+                const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+            };
+
+            // Social media sharing
+            window.shareToSocial = function (platform) {
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent('Join CREATIVUN 2025 - More Creative and So Much Fun! 🎭');
+
+                let shareUrl;
+                switch (platform) {
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                        break;
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                        break;
+                    default:
+                        return;
+                }
+
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            };
+
+            // Performance monitoring
+            window.addEventListener('load', function () {
+                // Log page load time
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                console.log('Page loaded in:', loadTime + 'ms');
+
+                // Track user engagement
+                let engagementTime = 0;
+                const startTime = Date.now();
+
+                window.addEventListener('beforeunload', function () {
+                    engagementTime = Date.now() - startTime;
+                    console.log('User engagement time:', Math.floor(engagementTime / 1000) + 's');
+                });
+            });
+        });
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

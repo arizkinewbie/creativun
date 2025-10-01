@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://creativun2025.phiraka.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow certain paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important resources for SEO
+Allow: /banner.png
+Allow: /poster.png
+Allow: /manifest.json
+Allow: /service-worker.js
