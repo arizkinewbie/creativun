@@ -4,38 +4,38 @@
     xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
     <url>
-        <loc>https://creativun2025.phiraka.com/</loc>
+        <loc>https://creativun.nbies.id/</loc>
         <lastmod>2025-10-01T10:00:00+07:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://creativun2025.phiraka.com/banner.png</image:loc>
+            <image:loc>https://creativun.nbies.id/banner.png</image:loc>
             <image:title>CREATIVUN 2025 Banner</image:title>
             <image:caption>Banner acara CREATIVUN 2025 - More Creative and So Much Fun</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://creativun2025.phiraka.com/poster.png</image:loc>
+            <image:loc>https://creativun.nbies.id/poster.png</image:loc>
             <image:title>CREATIVUN 2025 Poster</image:title>
             <image:caption>Poster rangkaian acara CREATIVUN 2025</image:caption>
         </image:image>
     </url>
 
     <url>
-        <loc>https://creativun2025.phiraka.com/#timeline</loc>
+        <loc>https://creativun.nbies.id/#timeline</loc>
         <lastmod>2025-10-01T10:00:00+07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://creativun2025.phiraka.com/#contact</loc>
+        <loc>https://creativun.nbies.id/#contact</loc>
         <lastmod>2025-10-01T10:00:00+07:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://creativun2025.phiraka.com/#faq</loc>
+        <loc>https://creativun.nbies.id/#faq</loc>
         <lastmod>2025-10-01T10:00:00+07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
