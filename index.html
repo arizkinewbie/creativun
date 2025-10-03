@@ -186,7 +186,8 @@
                             <a href="teaser.mp4" class="text-cyan-400 hover:text-cyan-300 underline">Download video</a>
                         </p>
                     </video>
-                    <p class="text-gray-400 mt-4 text-sm">🎥 Saksikan keseruan CREATIVUN 2025!</p>
+                    <p class="text-gray-400 mt-4 text-sm">🎥 Gimana? Apakah kalian siap jadi bagian cerita seru
+                        CREATIVUN 2025?</p>
                 </div>
             </div>
         </section>
@@ -247,7 +248,7 @@
 
         <!-- ===== BAGIAN TUJUAN ACARA ===== -->
         <section class="container mx-auto px-6 py-20 text-center">
-            <h2 class="text-4xl font-bold mb-10 text-glow-cyan">Tujuan Acara</h2>
+            <h2 class="text-4xl font-bold mb-10 text-glow-cyan">Event Objectives</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Kartu 1 -->
                 <div
@@ -355,48 +356,17 @@
         <section class="bg-gray-900 py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold mb-10 text-center text-glow-cyan">📞 Contact Information</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div
-                        class="bg-gray-800 p-8 rounded-lg border border-fuchsia-500/50 text-center hover:bg-gray-700/50 transition-colors">
-                        <div
-                            class="w-16 h-16 bg-fuchsia-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">🎯</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-fuchsia-400 mb-4">Panitia Acara</h3>
-                        <div class="space-y-2 text-gray-300">
-                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567890"
-                                    class="text-cyan-400 hover:text-cyan-300">+62 812-3456-7890</a></p>
-                            <p>✉️ Email: <a href="mailto:creativun2025@phiraka.com"
-                                    class="text-cyan-400 hover:text-cyan-300">creativun2025@phiraka.com</a></p>
-                            <p class="text-sm text-gray-400 mt-3">Pertanyaan umum & informasi acara</p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-gray-800 p-8 rounded-lg border border-cyan-500/50 text-center hover:bg-gray-700/50 transition-colors">
-                        <div class="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">📝</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-cyan-400 mb-4">Tim Registrasi</h3>
-                        <div class="space-y-2 text-gray-300">
-                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567891"
-                                    class="text-fuchsia-400 hover:text-fuchsia-300">+62 812-3456-7891</a></p>
-                            <p>✉️ Email: <a href="mailto:registration@phiraka.com"
-                                    class="text-fuchsia-400 hover:text-fuchsia-300">registration@phiraka.com</a></p>
-                            <p class="text-sm text-gray-400 mt-3">Bantuan pendaftaran & technical support</p>
-                        </div>
-                    </div>
-
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-6xl mx-auto">
                     <div
                         class="bg-gray-800 p-8 rounded-lg border border-fuchsia-500/50 text-center hover:bg-gray-700/50 transition-colors">
                         <div
                             class="w-16 h-16 bg-gradient-to-r from-fuchsia-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">🚨</span>
+                            <span class="text-2xl">🎯</span>
                         </div>
                         <h3 class="text-xl font-semibold text-fuchsia-400 mb-4">Emergency Contact</h3>
                         <div class="space-y-2 text-gray-300">
-                            <p>📱 WhatsApp: <a href="https://wa.me/6281234567892"
-                                    class="text-cyan-400 hover:text-cyan-300">+62 812-3456-7892</a></p>
+                            <p>📱 WhatsApp: <a href="https://wa.me/6285781077847"
+                                    class="text-cyan-400 hover:text-cyan-300">+62 857-8107-7847</a></p>
                             <p>🚨 <span class="text-red-400 font-semibold">Available 24/7</span></p>
                             <p class="text-sm text-gray-400 mt-3">Kontak darurat selama acara</p>
                         </div>
@@ -464,12 +434,26 @@
             // Fungsi untuk menampilkan modal
             function showModal() {
                 $('#registration-modal').removeClass('hidden').fadeIn(300);
+                // Hide meteor cursor effects when modal opens
+                if (window.CREATIVUN && window.CREATIVUN.MeteorCursor) {
+                    const meteorCursor = window.meteorCursorInstance;
+                    if (meteorCursor) {
+                        meteorCursor.hideEffects();
+                    }
+                }
             }
 
             // Fungsi untuk menyembunyikan modal
             function hideModal() {
                 $('#registration-modal').fadeOut(300, function () {
                     $(this).addClass('hidden');
+                    // Show meteor cursor effects when modal closes
+                    if (window.CREATIVUN && window.CREATIVUN.MeteorCursor) {
+                        const meteorCursor = window.meteorCursorInstance;
+                        if (meteorCursor) {
+                            meteorCursor.showEffects();
+                        }
+                    }
                 });
             }
 

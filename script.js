@@ -7,6 +7,248 @@ const AppState = {
     notifications: []
 };
 
+// Meteor Cursor Effect
+class MeteorCursor {
+    constructor() {
+        this.cursor = null;
+        this.trails = [];
+        this.particles = [];
+        this.streaks = [];
+        this.mouseHistory = [];
+        this.isMoving = false;
+        this.moveTimeout = null;
+        this.init();
+    }
+
+    init() {
+        // Create main cursor
+        this.cursor = document.createElement('div');
+        this.cursor.className = 'meteor-cursor';
+        document.body.appendChild(this.cursor);
+
+        // Create trail elements
+        for (let i = 0; i < 15; i++) {
+            const trail = document.createElement('div');
+            trail.className = 'meteor-trail';
+            document.body.appendChild(trail);
+            this.trails.push(trail);
+        }
+
+        // Create particle elements
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'meteor-particle';
+            document.body.appendChild(particle);
+            this.particles.push(particle);
+        }
+
+        // Create streak elements
+        for (let i = 0; i < 8; i++) {
+            const streak = document.createElement('div');
+            streak.className = 'meteor-streak';
+            document.body.appendChild(streak);
+            this.streaks.push(streak);
+        }
+
+        this.bindEvents();
+        console.log('Meteor cursor initialized');
+    }
+
+    bindEvents() {
+        document.addEventListener('mousemove', (e) => {
+            const currentTime = Date.now();
+            
+            // Update cursor position
+            this.cursor.style.left = e.clientX + 'px';
+            this.cursor.style.top = e.clientY + 'px';
+
+            // Calculate movement speed
+            let speed = 0;
+            if (this.mouseHistory.length > 0) {
+                const lastPos = this.mouseHistory[0];
+                const distance = Math.sqrt(
+                    Math.pow(e.clientX - lastPos.x, 2) + 
+                    Math.pow(e.clientY - lastPos.y, 2)
+                );
+                const timeDiff = currentTime - lastPos.time;
+                speed = distance / Math.max(timeDiff, 1);
+            }
+
+            // Add to history
+            this.mouseHistory.unshift({
+                x: e.clientX,
+                y: e.clientY,
+                time: currentTime,
+                speed: speed
+            });
+
+            // Keep only recent history
+            if (this.mouseHistory.length > 20) {
+                this.mouseHistory.splice(20);
+            }
+
+            // Update trails
+            this.updateTrails();
+            
+            // Update particles based on movement
+            this.isMoving = true;
+            clearTimeout(this.moveTimeout);
+            this.moveTimeout = setTimeout(() => {
+                this.isMoving = false;
+                this.fadeParticles();
+            }, 150);
+
+            if (speed > 0.5) {
+                this.createParticles(e.clientX, e.clientY, speed);
+                this.createStreaks(e.clientX, e.clientY, speed);
+            }
+        });
+
+        document.addEventListener('mouseenter', () => {
+            this.cursor.style.opacity = '1';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            this.cursor.style.opacity = '0';
+            this.fadeAllElements();
+        });
+
+        // Click effects
+        document.addEventListener('click', (e) => {
+            this.createClickEffect(e.clientX, e.clientY);
+        });
+    }
+
+    updateTrails() {
+        this.trails.forEach((trail, index) => {
+            if (this.mouseHistory[index + 1]) {
+                const pos = this.mouseHistory[index + 1];
+                const age = Date.now() - pos.time;
+                const opacity = Math.max(0, 1 - (age / 300) - (index * 0.06));
+                const scale = Math.max(0.3, 1 - (index * 0.05));
+                
+                trail.style.left = pos.x + 'px';
+                trail.style.top = pos.y + 'px';
+                trail.style.opacity = opacity;
+                trail.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            } else {
+                trail.style.opacity = '0';
+            }
+        });
+    }
+
+    createParticles(x, y, speed) {
+        const availableParticles = this.particles.filter(p => p.style.opacity == '0' || !p.style.opacity);
+        const particleCount = Math.min(Math.floor(speed * 3), availableParticles.length);
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = availableParticles[i];
+            if (particle) {
+                const offsetX = (Math.random() - 0.5) * 40;
+                const offsetY = (Math.random() - 0.5) * 40;
+                
+                particle.style.left = (x + offsetX) + 'px';
+                particle.style.top = (y + offsetY) + 'px';
+                particle.style.opacity = '1';
+                particle.style.animation = 'meteor-sparkle 0.6s ease-out';
+                
+                setTimeout(() => {
+                    particle.style.opacity = '0';
+                    particle.style.animation = '';
+                }, 600);
+            }
+        }
+    }
+
+    createStreaks(x, y, speed) {
+        if (this.mouseHistory.length < 2) return;
+        
+        const availableStreaks = this.streaks.filter(s => s.style.opacity == '0' || !s.style.opacity);
+        const streakCount = Math.min(Math.floor(speed * 1.5), availableStreaks.length);
+        
+        for (let i = 0; i < streakCount; i++) {
+            const streak = availableStreaks[i];
+            if (streak) {
+                const currentPos = this.mouseHistory[0];
+                const prevPos = this.mouseHistory[1];
+                
+                // Calculate angle based on movement direction
+                const angle = Math.atan2(currentPos.y - prevPos.y, currentPos.x - prevPos.x) + Math.PI/2;
+                
+                streak.style.left = x + 'px';
+                streak.style.top = y + 'px';
+                streak.style.opacity = Math.min(speed * 0.8, 1);
+                streak.style.transform = `translate(-50%, -50%) rotate(${angle}rad)`;
+                
+                setTimeout(() => {
+                    streak.style.opacity = '0';
+                }, 200);
+            }
+        }
+    }
+
+    createClickEffect(x, y) {
+        // Create burst of particles on click
+        const burstParticles = this.particles.filter(p => p.style.opacity == '0' || !p.style.opacity).slice(0, 8);
+        
+        burstParticles.forEach((particle, index) => {
+            const angle = (index / burstParticles.length) * Math.PI * 2;
+            const distance = 30 + Math.random() * 20;
+            const offsetX = Math.cos(angle) * distance;
+            const offsetY = Math.sin(angle) * distance;
+            
+            particle.style.left = (x + offsetX) + 'px';
+            particle.style.top = (y + offsetY) + 'px';
+            particle.style.opacity = '1';
+            particle.style.animation = 'meteor-sparkle 0.8s ease-out';
+            
+            setTimeout(() => {
+                particle.style.opacity = '0';
+                particle.style.animation = '';
+            }, 800);
+        });
+    }
+
+    fadeParticles() {
+        this.particles.forEach(particle => {
+            if (particle.style.opacity !== '0') {
+                particle.style.transition = 'opacity 0.5s ease-out';
+                setTimeout(() => {
+                    particle.style.opacity = '0';
+                }, 100);
+            }
+        });
+    }
+
+    fadeAllElements() {
+        [...this.trails, ...this.particles, ...this.streaks].forEach(element => {
+            element.style.opacity = '0';
+        });
+    }
+
+    hideEffects() {
+        // Hide main cursor
+        this.cursor.style.opacity = '0';
+        // Hide all effect elements
+        this.fadeAllElements();
+        // Stop any ongoing animations
+        [...this.trails, ...this.particles, ...this.streaks].forEach(element => {
+            element.style.animation = 'none';
+        });
+        console.log('Meteor effects hidden for modal');
+    }
+
+    showEffects() {
+        // Show main cursor
+        this.cursor.style.opacity = '1';
+        // Re-enable animations
+        [...this.trails, ...this.particles, ...this.streaks].forEach(element => {
+            element.style.animation = '';
+        });
+        console.log('Meteor effects restored after modal');
+    }
+}
+
 // Notification system
 class NotificationManager {
     static show(message, type = 'info', duration = 3000) {
@@ -415,6 +657,12 @@ document.addEventListener('DOMContentLoaded', () => {
             animationObserver.observe(el);
         });
     }
+
+    // Initialize Meteor Cursor
+    const meteorCursor = new MeteorCursor();
+    // Store instance globally for modal access
+    window.meteorCursorInstance = meteorCursor;
+    console.log('Meteor cursor telah diinisialisasi');
 });
 
 // Export for use in other scripts
@@ -424,5 +672,6 @@ window.CREATIVUN = {
     LiveUpdateManager,
     CountdownManager,
     AnalyticsManager,
-    AppState
+    AppState,
+    MeteorCursor
 };
