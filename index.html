@@ -109,12 +109,24 @@
     <header
         class="min-h-screen bg-gray-900 bg-cover bg-center flex flex-col justify-center items-center text-center p-8"
         style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.95)), url('banner.png');">
-        <h1 class="text-5xl md:text-7xl font-bold text-fuchsia-400 text-glow-fuchsia uppercase tracking-widest mt-7 notranslate">
+        <h1
+            class="text-5xl md:text-7xl font-bold text-fuchsia-400 text-glow-fuchsia uppercase tracking-widest mt-7 notranslate">
             CREATIVUN 2025</h1>
         <p class="mt-4 text-xl md:text-2xl text-cyan-300 text-glow-cyan">"More Creative and So Much Fun"</p>
         <div class="mt-8 text-lg text-gray-300 space-y-2">
             <p>🗓️ <span class="font-semibold">17-18 Oktober 2025</span></p>
             <p>📍 <span class="font-semibold">Sentul</span></p>
+        </div>
+
+        <!-- FINAL VOTE FOR AWARDING SESSION  -->
+        <div class="mt-8 bg-gray-800/50 p-6 rounded-lg border border-fuchsia-500/50 w-full max-w-4xl">
+            <h3 class="text-lg font-semibold mb-4 text-fuchsia-400">🏆 FINAL VOTE FOR AWARDING SESSION</h3>
+            <iframe src="https://forms.gle/dp8qNAdaPc35ijQv6" width="100%" height="500" frameborder="0"
+            marginheight="0" marginwidth="0" class="rounded-lg">Memuat…</iframe>
+        </div>
+        <!-- jika iframe gform error maka kasih link target blank -->
+        <div class="mt-4 text-sm text-gray-400">
+            Jika Anda mengalami masalah dengan formulir, silakan <a href="https://forms.gle/dp8qNAdaPc35ijQv6" target="_blank" class="text-cyan-400 hover:underline">klik di sini</a>.
         </div>
 
         <!-- Countdown Timer -->
@@ -141,7 +153,7 @@
         </div>
 
         <!-- Registration Progress Bar -->
-        <div class="mt-8 bg-gray-800/50 p-6 rounded-lg border border-fuchsia-500/50 max-w-md">
+        <div class="mt-8 bg-gray-800/50 p-6 rounded-lg border border-fuchsia-500/50 max-w-md hidden">
             <h3 class="text-lg font-semibold mb-4 text-fuchsia-400">📊 Status Pendaftaran</h3>
             <div class="w-full bg-gray-700 rounded-full h-4 mb-2">
                 <div id="progress-bar"
@@ -150,13 +162,14 @@
             </div>
             <p id="progress-text" class="text-sm text-gray-300">89% dari target peserta (49/55 orang)</p>
             <p class="text-xs text-cyan-300 mt-1">✨ Buruan daftar, lu doang yang belum 🫵🫵🫵</p>
+            <button id="register-btn"
+                class="mt-10 px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white font-bold text-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse button-glow">
+                DAFTAR SEKARANG
+            </button>
+            <p class="mt-4 text-gray-400">Atau <br><a href="https://forms.gle/MXxa1vma8CbFQ6449" target="_blank"
+                    class="text-cyan-400 hover:underline" title="Kalo form modal error, bisa klik ini aja guys!">KLIK
+                    DISINI</a></p>
         </div>
-
-        <button id="register-btn"
-            class="mt-10 px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white font-bold text-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse button-glow">
-            DAFTAR SEKARANG
-        </button>
-        <p class="mt-4 text-gray-400">Atau <br><a href="https://forms.gle/MXxa1vma8CbFQ6449" target="_blank" class="text-cyan-400 hover:underline" title="Kalo form modal error, bisa klik ini aja guys!">KLIK DISINI</a></p>
     </header>
 
     <main class="bg-gray-900">
