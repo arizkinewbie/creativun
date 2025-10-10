@@ -175,6 +175,12 @@ body {
 .timeline-item {
   position: relative;
   padding-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(217, 70, 239, 0.3);
 }
 
 .timeline-item::before {
@@ -196,6 +202,250 @@ body {
   bottom: -1rem;
   width: 2px;
   background: linear-gradient(to bottom, #d946ef, #06b6d4);
+}
+
+/* Enhanced timeline styling for better visual hierarchy */
+.timeline-item .min-w-\[140px\] {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item:nth-child(even) .min-w-\[140px\] {
+  background: linear-gradient(135deg, #d946ef, #06b6d4) !important;
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.3);
+}
+
+/* Day section styling for 2-column layout */
+.day-section {
+  position: relative;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.day-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Day 1 specific styling */
+.day-section:first-child {
+  border-left: 4px solid #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.05));
+}
+
+.day-section:first-child .timeline-item {
+  border-left: 3px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Purple border styling for new timeline items */
+.day-section .timeline-item.border-purple-500\/30 {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.day-section .timeline-item.border-purple-500\/30:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+/* Purple text color for headings */
+.text-purple-400 {
+  color: #a78bfa;
+}
+
+/* Day 2 specific styling */
+.day-section:last-child {
+  border-left: 4px solid #ec4899;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(251, 146, 60, 0.05));
+}
+
+.day-section:last-child .timeline-item {
+  border-left: 3px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Enhanced timeline item styling for 2-column layout */
+.day-section .timeline-item {
+  position: relative;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(31, 41, 55, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.day-section .timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.3s ease;
+}
+
+.day-section .timeline-item:hover::before {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), transparent);
+}
+
+.day-section:last-child .timeline-item:hover::before {
+  background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.8), transparent);
+}
+
+.day-section .timeline-item:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Time badge styling */
+.day-section .timeline-item .bg-gradient-to-r {
+  position: relative;
+  overflow: hidden;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-section .timeline-item .bg-gradient-to-r::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.day-section .timeline-item:hover .bg-gradient-to-r::before {
+  left: 100%;
+}
+
+/* Day header styling */
+.day-section h3 {
+  background: linear-gradient(135deg, #5b21b6, #1e40af) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(91, 33, 182, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.day-section:last-child h3 {
+  background: linear-gradient(135deg, #be185d, #ea580c) !important;
+  box-shadow: 0 8px 32px rgba(190, 24, 93, 0.4);
+}
+
+.day-section h3::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  transform: rotate(0deg);
+  transition: transform 3s ease;
+}
+
+.day-section:hover h3::before {
+  transform: rotate(360deg);
+}
+
+/* Outfit styling */
+.text-yellow-400 {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  font-weight: 700;
+}
+
+/* Mobile responsiveness for 2-column layout */
+@media (max-width: 1024px) {
+  .day-section {
+    margin-bottom: 2rem;
+  }
+  
+  .day-section .timeline-item {
+    padding: 1rem;
+  }
+  
+  .day-section .timeline-item .bg-gradient-to-r {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .day-section h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .day-section .timeline-item h4 {
+    font-size: 1rem;
+  }
+  
+  .day-section .timeline-item p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Day header styling */
+.timeline-item h3.bg-gradient-to-r {
+  background: linear-gradient(135deg, #5b21b6, #1e40af) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(91, 33, 182, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Outfit styling */
+.text-yellow-400 {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  font-weight: 700;
+}
+
+/* Timeline container improvements */
+.space-y-4 > .timeline-item {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(31, 41, 55, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsiveness for timeline */
+@media (max-width: 768px) {
+  .timeline-item .min-w-\[140px\] {
+    min-width: 100px !important;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1rem;
+  }
+  
+  .timeline-item::before {
+    left: -4px;
+  }
 }
 
 .gallery-item {
