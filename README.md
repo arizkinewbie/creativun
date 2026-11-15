@@ -1,166 +1,76 @@
-# CREATIVUN 2025 Website
-## "More Creative and So Much Fun"
+# Creativun Portal — Phiraka Sinergi Indonesia
+## The Annual Gathering & Celebration Platform
 
-Website resmi untuk acara tahunan CREATIVUN 2025 yang diselenggarakan oleh **Phiraka Sinergi Indonesia**.
-
-### 📅 Detail Acara
-- **Tanggal**: 17-18 Oktober 2025
-- **Lokasi**: ELLA HOUSE 1 SENTUL
-- **Tema**: "More Creative and So Much Fun"
-- **Dress Code**: Kostum/Cosplay Karakter Kartun
-
-### 🚀 Fitur Website
-
-#### ✅ Fitur Utama
-- **Responsive Design** - Optimal di semua perangkat (desktop, tablet, mobile)
-- **Countdown Timer** - Hitungan mundur real-time ke acara
-- **Sistem Registrasi** - Pendaftaran online dengan validasi form
-- **Timeline Acara** - Jadwal lengkap 2 hari acara
-- **Live Updates** - Update real-time status pendaftaran
-- **FAQ Section** - Pertanyaan yang sering ditanyakan
-- **Contact Information** - Informasi kontak WhatsApp
-- **SEO Optimized** - Meta tags lengkap untuk mesin pencari
-
-#### 🎨 Teknologi yang Digunakan
-- **HTML5** - Markup semantik
-- **CSS3** - Styling dengan animasi modern
-- **Tailwind CSS** - Framework CSS utility-first
-- **JavaScript ES6+** - Interaktivitas dan logic
-- **jQuery** - DOM manipulation
-
-### 🗂️ Struktur File
-
-```
-creativun/
-├── index.html          # File HTML utama
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-├── sitemap.xml         # SEO sitemap
-├── robots.txt          # Search engine directives
-├── banner.png          # Banner gambar acara
-├── poster.png          # Poster acara
-└── README.md           # Dokumentasi ini
-```
-
-### 🎯 Instalasi dan Penggunaan
-
-1. **Clone atau Download** repository ini
-2. **Upload** semua file ke web server/hosting
-3. **Akses** website melalui browser
-4. **Install** sebagai PWA (opsional)
-
-### 📊 Fitur Analytics
-- **Page Views** tracking
-- **Registration** analytics
-- **User Interaction** monitoring
-- **Performance** metrics
-
-### 🔧 Konfigurasi
-
-#### Environment Variables
-Tidak ada environment variables yang diperlukan. Website bekerja langsung setelah upload.
-
-#### Browser Support
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
-
-### 📈 Performance Optimizations
-
-#### Loading Optimizations
-- **Lazy Loading** untuk gambar
-- **CSS/JS** terpisah untuk caching
-- **Font** preloading
-- **Service Worker** caching
-
-#### SEO Features
-- **Meta Tags** lengkap
-- **Open Graph** untuk social media
-- **Twitter Cards** support
-- **Sitemap.xml** untuk search engines
-- **Robots.txt** configuration
-
-### 🎨 Customization
-
-#### Colors
-- **Primary**: Fuchsia (#d946ef)
-- **Secondary**: Cyan (#06b6d4)
-- **Background**: Dark Gray (#111827)
-- **Text**: Light Gray (#f3f4f6)
-
-#### Fonts
-- **Heading**: Orbitron (Google Fonts)
-- **Body**: Inter (Google Fonts)
-- **Fallback**: Poppins
-
-### 📱 Responsive Breakpoints
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-### 🛠️ Development
-
-#### Local Development
-1. Buka `index.html` di browser
-2. Atau gunakan local server:
-   ```bash
-   # Python
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve .
-   
-   # PHP
-   php -S localhost:8000
-   ```
-
-### 🚀 Deployment
-
-#### Upload Files
-1. Upload semua file ke hosting
-2. Pastikan HTTPS aktif untuk keamanan
-3. Test functionality di mobile dan desktop
-
-#### Hosting Recommendations
-- **Netlify** (recommended untuk static sites)
-- **Vercel**
-- **GitHub Pages**
-- **Firebase Hosting**
-- **Shared Hosting** dengan HTTPS
-
-### 📞 Support & Contact
-
-Untuk pertanyaan teknis atau support, hubungi:
-- **WhatsApp**: 0895-3609-52599
-- **Email**: info@phiraka.com
-
-### 📄 License
-
-© 2024 Phiraka Sinergi Indonesia. All rights reserved.
-
-### 🔄 Changelog
-
-#### Version 2.0.0 (Current)
-- ✅ Enhanced mobile experience
-- ✅ Added live updates
-- ✅ Improved SEO optimization
-- ✅ Added analytics tracking
-- ✅ Performance optimizations
-- ✅ Separated CSS and JavaScript files
-
-#### Version 1.1.0
-- ✅ Added countdown timer
-- ✅ Added FAQ section
-- ✅ Improved responsive design
-- ✅ Added registration modal
-
-#### Version 1.0.0
-- ✅ Initial release
-- ✅ Basic layout and design
-- ✅ Registration functionality
-- ✅ Event information display
+Website resmi portal multi-tahun perhelatan akbar **Creativun** yang diselenggarakan oleh **Phiraka Sinergi Indonesia** (Tim People & Culture dan Tim Development & Services).
 
 ---
 
-**CREATIVUN 2025** - More Creative and So Much Fun! 🎭✨
+### 🌐 Struktur Portal & Live URL
+
+| Edisi | Status | URL Akses | Deskripsi & Lokasi |
+| :--- | :--- | :--- | :--- |
+| **Creativun 2027** | ⚡ **Coming Soon** | [`https://creativun.nbies.id/`](https://creativun.nbies.id/) | *The Next Wave of Innovation, Creativity & Fun* |
+| **Creativun 2026** | 🚀 **Arsip Aktif** | [`https://creativun.nbies.id/2026/`](https://creativun.nbies.id/2026/) | *Bring Back the 80s, Your Way! · Lumé Coffee Tebet* |
+| **Creativun 2025** | ✨ **Arsip Aktif** | [`https://creativun.nbies.id/2025/`](https://creativun.nbies.id/2025/) | *More Creative and So Much Fun · Sentul* |
+
+---
+
+### 🌿 Strategi Git & Branching
+
+Repositori ini menerapkan strategi multi-folder monorepo pada branch `main` serta snapshot branch per tahun:
+
+- **`main` (Production Branch)**:
+  - Root (`/index.html`): Halaman teaser/countdown **Creativun 2027 Coming Soon**.
+  - Folder [`/2026/`](./2026/): Seluruh website dan aset resmi Creativun 2026.
+  - Folder [`/2025/`](./2025/): Seluruh website dan aset resmi Creativun 2025.
+- **`2026`**: Branch snapshot historis edisi Creativun 2026.
+- **`2025`**: Branch snapshot historis edisi Creativun 2025.
+
+---
+
+### 🗂️ Struktur Direktori
+
+```text
+creativun/
+├── 2025/                                        # Arsip lengkap website Creativun 2025 (Sentul)
+│   ├── banner.png, favicon.png, poster.png
+│   ├── index.html, script.js, styles.css
+│   └── teaser.mp4, teaser.MOV
+│
+├── 2026/                                        # Arsip lengkap website Creativun 2026 (Lumé Coffee)
+│   ├── audio/                                   # Audio background retro (Take On Me, Anak Sekolah)
+│   ├── denah.png                                # Denah layout venue Lumé Coffee
+│   ├── FAQ CREATIVUN 2GETHER.pdf                # Dokumen FAQ resmi
+│   ├── index.html                               # Halaman utama Creativun 2026
+│   ├── PerformanceLineUp.mov/.mp4/.png          # Media video & poster line up panggung
+│   ├── Phiraka Creativun 2gether 2026...pdf     # Booklet guideline
+│   ├── poster.png, favicon.png, team.png        # Grafis identitas & foto panitia
+│
+├── index.html                                   # Halaman utama portal: Coming Soon Creativun 2027
+├── favicon.png                                  # Favicon portal
+├── poster.png                                   # Poster default
+├── robots.txt                                   # Direktif search engine crawler
+├── sitemap.xml                                  # Sitemap XML multi-edisi (2025, 2026, 2027)
+├── .gitignore                                   # Konfigurasi file yang diabaikan git
+└── README.md                                    # Dokumentasi portal ini
+```
+
+---
+
+### 🎯 Pengembangan & Pengujian Lokal
+
+```bash
+# Menggunakan Python
+python3 -m http.server 8000
+
+# Menggunakan PHP
+php -S localhost:8000
+```
+
+Buka peramban di `http://localhost:8000` untuk halaman 2027, `http://localhost:8000/2026/` untuk 2026, atau `http://localhost:8000/2025/` untuk 2025.
+
+---
+
+### 📄 Hak Cipta
+
+&copy; 2027 Phiraka Sinergi Indonesia. All rights reserved.

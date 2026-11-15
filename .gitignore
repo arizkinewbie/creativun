@@ -1,0 +1,9 @@
+# Server configurations & SSL
+.htaccess
+.user.ini
+/.well-known/
+
+# OS and Temporary files
+.DS_Store
+Thumbs.db
+*.tmp
