@@ -1,13 +1,20 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://creativun.nbies.id/sitemap.xml
+# Important media & static resources
+Allow: /poster.png
+Allow: /favicon.png
+Allow: /2026/
+Allow: /2025/
+
+# Disallow system & private files
+Disallow: /.git/
+Disallow: /.user.ini
+Disallow: /.htaccess
+Disallow: /*.pdf$
 
 # Crawl delay
 Crawl-delay: 1
 
-# Allow important resources for SEO
-Allow: /poster.png
-Allow: /favicon.png
-Allow: /team.png
+# Sitemap index location
+Sitemap: https://creativun.nbies.id/sitemap.xml
