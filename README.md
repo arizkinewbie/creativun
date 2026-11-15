@@ -15,16 +15,15 @@ Website resmi portal multi-tahun perhelatan akbar **Creativun** yang diselenggar
 
 ---
 
-### 🌿 Strategi Git & Branching
+### 🌿 Manajemen Repositori & Git
 
-Repositori ini menerapkan strategi multi-folder monorepo pada branch `main` serta snapshot branch per tahun:
+Repositori ini menggunakan strategi **Single Branch (`main`)** berbasis folder tahunan (*folder-based monorepo*) yang bersih dan terpadu:
 
-- **`main` (Production Branch)**:
-  - Root (`/index.html`): Halaman teaser/countdown **Creativun 2027 Coming Soon**.
+- **Branch `main` (Single Source of Truth)**:
+  - Root (`/index.html`): Halaman utama portal **Creativun 2027 Coming Soon**.
   - Folder [`/2026/`](./2026/): Seluruh website dan aset resmi Creativun 2026.
   - Folder [`/2025/`](./2025/): Seluruh website dan aset resmi Creativun 2025.
-- **`2026`**: Branch snapshot historis edisi Creativun 2026.
-- **`2025`**: Branch snapshot historis edisi Creativun 2025.
+- Cukup kelola, push, dan pull pada satu branch `main`. Semua edisi tahunan otomatis aktif di server Nginx tanpa perlu branching terpisah.
 
 ---
 
